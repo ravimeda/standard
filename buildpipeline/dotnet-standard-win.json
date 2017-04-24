@@ -13,7 +13,7 @@
       },
       "inputs": {
         "filename": "$(PB_Git)",
-        "arguments": "clone $(PB_VsoCorefxGitUrl) standard",
+        "arguments": "clone $(PB_VsoStandardGitUrl) standard",
         "workingFolder": "",
         "failOnStandardError": "false"
       }
@@ -72,7 +72,48 @@
         "workingFolder": "",
         "failOnStandardError": "false"
       }
-    }
+    },
+    //{
+    //  "enabled": true,
+    //  "continueOnError": false,
+    //  "alwaysRun": false,
+    //  "displayName": "NuGet Publisher ",
+    //  "timeoutInMinutes": 0,
+    //  "task": {
+    //    "id": "333b11bd-d341-40d9-afcf-b32d5ce6f25b",
+    //    "versionSpec": "0.*",
+    //    "definitionType": "task"
+    //  },
+    //  "inputs": {
+    //    "searchPattern": "bin/packages/**/*.nupkg;-:bin/packages/**/*.symbols.nupkg",
+    //    "nuGetFeedType": "external",
+    //    "connectedServiceName": "e3b269d4-5b99-4a32-a6ff-2c2feb920051",
+    //    "feedName": "",
+    //    "nuGetAdditionalArgs": "",
+    //    "verbosity": "Detailed",
+    //    "nuGetVersion": "3.5.0.1829",
+    //    "nuGetPath": ""
+    //  }
+    //},
+    //{
+    //  "enabled": true,
+    //  "continueOnError": true,
+    //  "alwaysRun": false,
+    //  "displayName": "Update dotnet/versions",
+    //  "timeoutInMinutes": 0,
+    //  "task": {
+    //    "id": "bfc8bf76-e7ac-4a8c-9a55-a944a9f632fd",
+    //    "versionSpec": "1.*",
+    //    "definitionType": "task"
+    //  },
+    //  "inputs": {
+    //    "filename": "$(Build.SourcesDirectory)\\standard\\build.cmd",
+    //    "arguments": "-- /v:diagnostic /t:UpdatePublishedVersions /p:GitHubUser=\"dotnet-build-bot\" /p:GitHubEmail=\"dotnet-build-bot@microsoft.com\"  /p:GitHubAuthToken=\"$(PB_GitHubAuthToken)\" /p:VersionsRepoOwner=\"$(VersionsRepoOwner)\" /p:VersionsRepo=\"versions\" /p:VersionsRepoPath=\"build-info/dotnet/$(PB_GitHubRepositoryName)/$(SourceBranch)\" /p:ShippedNuGetPackageGlobPath=\"bin/packages/Debug/*.nupkg\"",
+    //    "modifyEnvironment": "false",
+    //    "workingFolder": "",
+    //    "failOnStandardError": "false"
+    //  }
+    //}
   ],
   "options": [
     {
